@@ -13,18 +13,16 @@ const setupInput = function(conn) {
 const handleUserInput = (key) => {
   if (key === '\u0003') { // \u0003 maps to ctrl+c input
     process.exit();
-  }
-  if(key === 'w') {
+  } else if(key === 'w') {
     connection.write("Move: up")
-  }
-  if(key === 'a') {
+  } else if(key === 'a') {
     connection.write("Move: left")
-  }
-  if(key === 's') {
+  } else if(key === 's') {
     connection.write("Move: down")
-  }
-  if(key === 'd') {
+  } else if(key === 'd') {
     connection.write("Move: right")
+  } else if(key === 'y') {
+    connection.write("Say: GOO")
   }
 }
 
